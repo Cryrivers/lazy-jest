@@ -18,10 +18,11 @@ export default [
 			{
 				name: 'lazy-jest',
 				file: pkg.browser,
-				format: 'umd'
+				format: 'umd',
+				exports: 'named'
 			},
-			{ file: pkg.main, format: 'cjs' },
-			{ file: pkg.modules, format: 'es' }
+			{ file: pkg.main, format: 'cjs', exports: 'named' },
+			{ file: pkg.modules, format: 'es', exports: 'named' }
 		],
 		plugins: [
 			resolve({ modulesOnly: true }),
